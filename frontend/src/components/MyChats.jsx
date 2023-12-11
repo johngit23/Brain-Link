@@ -25,7 +25,7 @@ const MyChats = ({ fetchAgain }) => {
       };
 
       const { data } = await axios.get(
-        "http://localhost:3000/api/chat",
+        "brain-link.vercel.app/api/chat",
         config
       );
       console.log(data);

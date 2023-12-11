@@ -1,0 +1,7 @@
+.messages {
+  display: flex;
+  flex-direction: column;
+  max-height: "360px";
+  overflow: auto;
+  scrollbar-width: none;
+}

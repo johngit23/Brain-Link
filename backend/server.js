@@ -40,7 +40,7 @@ if (process.env.NODE_ENV === "production") {
   );
 } else {
   app.get("/", (req, res) => {
-    res.json("API is running..");
+    res.send("API is running..");
   });
 }
 

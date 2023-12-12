@@ -51,7 +51,7 @@ const Signup = () => {
         },
       };
       const { data } = await axios.post(
-        "brain-link.vercel.app/api/user",
+        "http://localhost:3000/api/user",
         {
           name,
           email,

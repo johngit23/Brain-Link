@@ -41,7 +41,7 @@ const Login = () => {
       };
 
       const { data } = await axios.post(
-        "brain-link.vercel.app/api/user/login",
+        "http://localhost:3000/api/user/login",
         { email, password },
         config
       );

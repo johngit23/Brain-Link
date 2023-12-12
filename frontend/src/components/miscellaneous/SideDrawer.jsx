@@ -77,7 +77,7 @@ function SideDrawer() {
       };
 
       const { data } = await axios.get(
-        `http://localhost:3000/user?search=${search}`,
+        `https://brain-link.onrender.com/user?search=${search}`,
         config
       );
 
@@ -107,7 +107,7 @@ function SideDrawer() {
         },
       };
       const { data } = await axios.post(
-        `http://localhost:3000/api/chat`,
+        `https://brain-link.onrender.com/api/chat`,
         { userId },
         config
       );

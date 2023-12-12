@@ -59,7 +59,7 @@ const GroupChatModal = ({ children }) => {
         },
       };
       const { data } = await axios.get(
-        `https://brain-link.onrender.com/api/user?search=${search}`,
+        `http://localhost:3000/api/user?search=${search}`,
         config
       );
       console.log(data);
@@ -100,7 +100,7 @@ const GroupChatModal = ({ children }) => {
         },
       };
       const { data } = await axios.post(
-        `https://brain-link.onrender.com/api/chat/group`,
+        `http://localhost:3000/api/chat/group`,
         {
           name: groupChatName,
           users: JSON.stringify(selectedUsers.map((u) => u._id)),

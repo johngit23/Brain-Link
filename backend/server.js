@@ -53,7 +53,7 @@ const PORT = process.env.PORT || 3000;
 
 const io = new Server(httpServer, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "https://brain-link.onrender.com",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     //credentials: true,
   },

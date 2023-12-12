@@ -77,7 +77,7 @@ function SideDrawer() {
       };
 
       const { data } = await axios.get(
-        `brain-link.vercel.app/api/user?search=${search}`,
+        `http://localhost:3000/user?search=${search}`,
         config
       );
 
@@ -107,7 +107,7 @@ function SideDrawer() {
         },
       };
       const { data } = await axios.post(
-        `brain-link.vercel.app/api/chat`,
+        `http://localhost:3000/api/chat`,
         { userId },
         config
       );

@@ -25,7 +25,7 @@ const MyChats = ({ fetchAgain }) => {
       };
 
       const { data } = await axios.get(
-        "https://brain-link.onrender.com/api/chat",
+        "http://localhost:3000/api/chat",
         config
       );
       console.log(data);

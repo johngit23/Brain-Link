@@ -41,7 +41,7 @@ const Login = () => {
       };
 
       const { data } = await axios.post(
-        "https://brain-link.onrender.com/api/user/login",
+        "http://localhost:3000/api/user/login",
         { email, password },
         config
       );

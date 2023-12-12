@@ -15,7 +15,7 @@ import animationData from "../animations/typing.json";
 import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { ChatState } from "../Context/ChatProvider";
-const ENDPOINT = "brain-link.vercel.app"; // "https://brain-link.herokuapp.com"; -> After deployment
+const ENDPOINT = "http://localhost:3000"; // "https://brain-link.herokuapp.com"; -> After deployment
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
@@ -62,7 +62,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       setLoading(true);
 
       const { data } = await axios.get(
-        `brain-link.vercel.app/api/message/${selectedChat._id}`,
+        `http://localhost:3000/api/message/${selectedChat._id}`,
         config
       );
       setMessages(data);
@@ -93,7 +93,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         };
         setNewMessage("");
         const { data } = await axios.post(
-          "brain-link.vercel.app/api/message",
+          "http://localhost:3000/api/message",
           {
             content: newMessage,
             chatId: selectedChat._id,

@@ -211,7 +211,7 @@ function SideDrawer() {
             {loading ? (
               <ChatLoading />
             ) : (
-              searchResult && searchResult.map((user) => (
+              searchResult?.map((user) => (
                 <UserListItem
                   key={user._id}
                   user={user}

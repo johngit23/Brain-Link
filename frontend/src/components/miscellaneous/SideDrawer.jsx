@@ -160,6 +160,7 @@ function SideDrawer() {
             <MenuList pl={2}>
               {!notification.length && "No New Messages"}
               {notification.map((notif) => (
+                <React.Fragment>
                 <MenuItem
                   key={notif._id}
                   onClick={() => {
@@ -171,6 +172,7 @@ function SideDrawer() {
                     ? `New Message in ${notif.chat.chatName}`
                     : `New Message from ${getSender(user, notif.chat.users)}`}
                 </MenuItem>
+                </React.Fragment>
               ))}
             </MenuList>
           </Menu>
@@ -212,11 +214,13 @@ function SideDrawer() {
               <ChatLoading />
             ) : (
               searchResult?.map((user) => (
+                <React.Fragment>
                 <UserListItem
                   key={user._id}
                   user={user}
                   handleFunction={() => accessChat(user._id)}
                 />
+                </React.Fragment>
               ))
             )}
             {loadingChat && <Spinner ml="auto" display="flex" />}
